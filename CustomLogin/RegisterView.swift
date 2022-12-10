@@ -20,9 +20,9 @@ struct RegisterView: View {
     var body: some View {
         NavigationView{
             ZStack {
-                LinearGradient(gradient: Gradient(colors: [.blue,.blue,.pink]), startPoint:
-                        .top, endPoint: .bottom)
-                    .edgesIgnoringSafeArea(.all)
+                
+                Color(#colorLiteral(red: 0.05222354829, green: 0.3226804733, blue: 0.7275559306, alpha: 1)).opacity(0.5)
+                    .ignoresSafeArea()
                 VStack {
                     Text("TSU DATE")
                         .font(.system(size: 50, weight: .bold))
