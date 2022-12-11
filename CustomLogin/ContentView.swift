@@ -32,14 +32,24 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    VStack(spacing: 10) {
+                    VStack(spacing: 8) {
                         EmailTextfieldView(fillin: email, placeholder: "Email/Phone")
                         EmailTextfieldView(fillin: email, placeholder: "Password")
                         
                         RegisterLogButton(text: "LOG IN") {
                         }
                             .padding(.top, 10)
+                        Button(action: {
                             
+                        }, label: {
+                            Text("Forgot password?")
+                                .font(.system(size: 15))
+                                .foregroundColor(Color.white)
+                                .padding(.top, -10)
+                        })
+                            
+                      
+                        
                         
                         Text("Do not have an account? then Register")
                             .font(.system(size: 15, weight: .semibold))
@@ -63,6 +73,8 @@ struct ContentView: View {
                                 .padding(.horizontal)
                             .padding(.bottom)
                         }).modifier(HideNavigationView())
+                        
+                        
                         
                         
                         Spacer().frame(height: 70)
